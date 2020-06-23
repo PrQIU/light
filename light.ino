@@ -1,13 +1,12 @@
 #include "Button2.h";
-#include "Delay.h"
 #include "Adafruit_NeoPixel.h"
 #ifdef __AVR__
     #include <avr/power.h>
 #endif
 
 #define NUMPIXELS  12   // WS2812灯珠数量
-#define WSPIN      0    // WS2812连接针脚
-#define BTNPIN     2    // TTP223触摸按键连接阵脚
+#define WSPIN      0    // WS2812连接引脚
+#define BTNPIN     2    // TTP223触摸按键连接引脚
 
 Adafruit_NeoPixel pixels = Adafruit_NeoPixel(NUMPIXELS, WSPIN, NEO_GRB + NEO_KHZ800);
 Button2 button = Button2(BTNPIN);
